@@ -1,0 +1,6 @@
+# Sample username wordlist — one per line
+# Lines starting with # are ignored
+johndoe
+alice_hacker
+dev_master
+guitarplayer99
