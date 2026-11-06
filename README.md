@@ -1,5 +1,15 @@
 # 🕵️ USERNAME OSINT TOOL
 
+
+## Get this repository
+
+Clone the current project (this repository's canonical GitHub URL), then follow the installation and usage steps below.
+
+```bash
+git clone https://github.com/cyberworlduniversity/osint_username_tool.git
+cd osint_username_tool
+```
+
 > **Find social and developer accounts across 40+ platforms by username.**  
 > Fast · Async · Color-coded · Multi-format export
 
