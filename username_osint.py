@@ -199,7 +199,6 @@ async def check_site(
             url,
             allow_redirects=True,
             timeout=aiohttp.ClientTimeout(total=timeout),
-            ssl=False
         ) as resp:
             elapsed = (time.perf_counter() - t_start) * 1000
             result = SiteResult(
@@ -267,7 +266,7 @@ async def scan_username(
         async with semaphore:
             return await check_site(session, name, config, username, timeout, verbose)
 
-    connector = aiohttp.TCPConnector(limit=concurrency, ssl=False)
+    connector = aiohttp.TCPConnector(limit=concurrency)
     async with aiohttp.ClientSession(headers=headers, connector=connector) as session:
         tasks = [bounded_check(name, cfg) for name, cfg in sites.items()]
         results = await asyncio.gather(*tasks)
